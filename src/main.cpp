@@ -63,17 +63,20 @@ int main(int argc, const char **argv)
     // RoutePlanner object below in place of 10, 10, 90, 90.
     float start_x, start_y, end_x, end_y;
 
-    std::cout << "\nEnter start & end coordinates\n" << "x: ";
-    std::cin >> start_x >> start_y >> end_x >> end_y;
-    /*
-  	std::cout << "y: ";
+    std::cout << "\nEnter start & end coordinates\n";
+    std::cout << "start_x: ";
+    
+    std::cin >> start_x;
+    
+  	std::cout << "start_y: ";
     std::cin >> start_y;
 
-    std::cout << "\nEnter end coordinates\n" << "x: ";
+    std::cout << "\nEnter end coordinates\n";
+    std::cout << "end_x: ";
     std::cin >> end_x;
-    std::cout << "y: ";
+    std::cout << "end_y: ";
     std::cin >> end_y;
-	*/
+	
   
     if(!check_bounds_ok(start_x) || !check_bounds_ok(start_y) || !check_bounds_ok(end_x)|| !check_bounds_ok(end_y)){
         std::cout << "\nError: Coordinates not within range!\n";
